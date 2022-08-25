@@ -1,21 +1,69 @@
 import React from 'react';
+import './styles/footer.css'
 
-export default function Footer() {
-  return (
-    <div>
-      <h1>Resume Page</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-        velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
-        ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
-        non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
-        ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras
-        rutrum ligula in tincidunt commodo. Morbi sit amet mollis orci, in
-        tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
-        porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
-        vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus.
-      </p>
-    </div>
-  );
+const contact = {
+    icons: {
+        phone: 'tel:4085084473',
+        mail: 'mailto:wmaverick4@gmail.com',
+        linkedin: "https://iconape.com/wp-content/files/yd/367773/svg/logo-linkedin-logo-icon-png-svg.png",
+        github:"https://cdn-icons-png.flaticon.com/512/25/25231.png",
+        facebook:"https://cdn-icons-png.flaticon.com/512/44/44646.png",
+        instagram:"https://cdn-icons-png.flaticon.com/512/87/87390.png" ,
+        twitter:"https://cdn-icons-png.flaticon.com/512/81/81609.png"
+    },
+    links: {
+        phone: 'https://cdn-icons-png.flaticon.com/512/15/15874.png',
+        mail: 'https://cdn-icons-png.flaticon.com/512/646/646094.png',
+        linkedin: "https://www.linkedin.com/in/maverick-wong-4488b4241/",
+        github:"https://github.com/maverickwong17",
+        facebook:'https://www.facebook.com/maverickwong17',
+        instagram:"https://www.instagram.com/whats_wong.maverick/",
+        twitter:"https://twitter.com/wong_maverick"
+    }
 }
+
+function Footer() {
+  return (
+    <footer>
+    <h4>Find Me At:</h4>
+    <ul class="links">
+        <li>
+            <a href= {contact.links.phone}>
+                <img src={contact.icons.phone} alt="phone"/>
+            </a>
+        </li>
+        <li>
+            <a href= {contact.links.mail}>
+            <img src={contact.icons.mail} alt="email"/>
+            </a>
+        </li>
+        <li>
+            <a href= {contact.links.linkedin} target="_blank"> 
+            <img src={contact.icons.linkedin} alt="Linkdin" />
+            </a>
+        </li>
+        <li>
+            <a href= {contact.links.github} target="_blank"> 
+            <img src={contact.icons.github} alt="Github"/>
+            </a>
+        </li>
+        <li>
+            <a href={contact.links.facebook} target="_blank"> 
+            <img src={contact.icons.facebook} alt="Facebook"/> 
+            </a>
+        </li>
+        <li>
+            <a href={contact.links.instagram}target="_blank"> 
+            <img src={contact.icons.instagram} alt="instagram"/>
+            </a>
+        </li>
+        <li>
+            <a href={contact.links.twitter} target="_blank"> 
+            <img src={contact.icons.twitter} alt="Twitter"/>
+            </a>
+        </li>
+    </ul>
+    </footer>
+  )
+}
+export default Footer

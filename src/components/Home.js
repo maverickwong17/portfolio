@@ -1,5 +1,9 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import Resume from './Resume';
+import About from './About';
+import Portfolio from './Portfolio';
+import Contact from './Contact';
+import Footer from "./Footer";
 
 function NavTabs({ currentPage, handlePageChange }) {
   return (
@@ -44,4 +48,30 @@ function NavTabs({ currentPage, handlePageChange }) {
   );
 }
 
-export default NavTabs;
+export default function PortfolioContainer() {
+  const [currentPage, setCurrentPage] = useState('About');
+
+  const renderPage = () => {
+    if (currentPage === 'About') {
+      return <About />;
+    }
+    if (currentPage === 'Portfolio') {
+      return <Portfolio />;
+    }
+    if (currentPage === 'Resume') {
+      return <Resume />;
+    }
+    return <Contact />;
+  };
+
+  const handlePageChange = (page) => setCurrentPage(page);
+
+  return (
+    <div>
+		<h1>Maverick Wong</h1>
+		<NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+		{renderPage()}
+		<Footer />
+    </div>
+  );
+}
