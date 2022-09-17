@@ -14,7 +14,7 @@ function Header(props) {
             <a
                 href="/about"
                 onClick={() => handlePageChange('About')}
-                className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+                className={currentPage === 'About' ? 'nav-link act-ive' : 'nav-link'}
             >
                 About
             </a>

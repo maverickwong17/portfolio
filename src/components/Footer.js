@@ -2,15 +2,31 @@ import React from 'react';
 import './styles/footer.css'
 
 var contact = [
-    { name:"linkedin", icon:"https://iconape.com/wp-content/files/yd/367773/svg/logo-linkedin-logo-icon-png-svg.png", link:"https://www.linkedin.com/in/maverick-wong/" },
-    { name:"github", icon:"https://cdn-icons-png.flaticon.com/512/25/25231.png" , link:"https://github.com/maverickwong17" },
-    { name:"facebook", icon:"https://cdn-icons-png.flaticon.com/512/44/44646.png" , link:"https://www.facebook.com/maverickwong17" },
-    { name:"instagram", icon:"https://cdn-icons-png.flaticon.com/512/87/87390.png" , link:"https://www.instagram.com/whats_wong.maverick/" },
-    { name:"twitter", icon:"https://cdn-icons-png.flaticon.com/512/81/81609.png" , link:"https://twitter.com/wong_maverick" },
+    { 
+        name:"linkedin", 
+        icon:"https://iconape.com/wp-content/files/yd/367773/svg/logo-linkedin-logo-icon-png-svg.png", 
+        link:"https://www.linkedin.com/in/maverick-wong/" 
+    },
+    { 
+        name:"github", 
+        icon:"https://cdn-icons-png.flaticon.com/512/25/25231.png", 
+        link:"https://github.com/maverickwong17" 
+    },
+    { 
+        name:"facebook", 
+        icon:"https://cdn-icons-png.flaticon.com/512/44/44646.png", 
+        link:"https://www.facebook.com/maverickwong17" 
+    },
+    { 
+        name:"instagram", 
+        icon:"https://cdn-icons-png.flaticon.com/512/87/87390.png",
+        link:"https://www.instagram.com/whats_wong.maverick/" 
+    },
+    { 
+        name:"twitter", 
+        icon:"https://cdn-icons-png.flaticon.com/512/81/81609.png" , 
+        link:"https://twitter.com/wong_maverick" },                 9
 ]
-
-var [ linkedin , github , facebook , instagram , twitter ] = contact
-
 
 function Footer() {
   return (
