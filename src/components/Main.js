@@ -1,36 +1,35 @@
-import React, { useState } from 'react';
-import Resume from './pages/Resume';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+
+// import Fade from 'react-reveal/Fade';
+import Header from './Header';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
-import Footer from "./Footer";
-import Header from './Header';
+import Resume from './pages/Resume';
+import Contact from './pages/Contact'
+import Footer from './Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function PortfolioContainer() {
-  const [currentPage, setCurrentPage] = useState('About');
-
-  const renderPage = () => {
-    if (currentPage === 'About') {
-      return <About />;
-    }
-    if (currentPage === 'Portfolio') {
-      return <Portfolio />;
-    }
-    if (currentPage === 'Resume') {
-      return <Resume />;
-    }
-      return <Contact />;
-  };
-
-  const handlePageChange = (page) => setCurrentPage(page);
+  const currentPage = useLocation().pathname;
 
   return (
     <main>
-      <div className='container py-4'>
-		<Header currentPage = {currentPage} />
-      {renderPage()}
-		<Footer />
-      </div>
+        <Header currentPage={currentPage}/>
+        {/* Conditional reveal animations based on page location state */}
+        <div if={currentPage === '/about'}>
+            <About />
+        </div>
+        <div if={currentPage === '/portfolio'}>
+            <Portfolio />
+        </div>
+        <div if={currentPage === '/resume'}>
+            <Resume />
+        </div>
+        <div if={currentPage === '/contact'}>
+            <Contact />
+        </div>
+        <Footer />
     </main>
-  );
+);
 }

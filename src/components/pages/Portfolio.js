@@ -1,5 +1,9 @@
 import React from 'react';
 
+const projects = {
+  
+}
+
 export default function Blog() {
   return (
     <div>

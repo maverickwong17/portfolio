@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+// import Nav from 'react-bootstrap/Nav';
 
-function Header({ page, }) {
-    
+function Header(props) {
+    console.log(props)
     const [currentPage, setCurrentPage] = useState('About');
     const handlePageChange = (page) => setCurrentPage(page);
 
@@ -11,7 +12,7 @@ function Header({ page, }) {
       <ul className="nav nav-tabs">
             <li className="nav-item">
             <a
-                href="#about"
+                href="/about"
                 onClick={() => handlePageChange('About')}
                 className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
             >
@@ -20,7 +21,7 @@ function Header({ page, }) {
             </li>
             <li className="nav-item">
             <a
-                href="#portfolio"
+                href="/portfolio"
                 onClick={() => handlePageChange('Portfolio')}
                 className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
             >
@@ -29,7 +30,7 @@ function Header({ page, }) {
             </li>
             <li className="nav-item">
             <a
-                href="#resume"
+                href="/resume"
                 onClick={() => handlePageChange('Resume')}
                 className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
             >
@@ -38,7 +39,7 @@ function Header({ page, }) {
             </li>
             <li className="nav-item">
             <a
-                href="#contact"
+                href="/contact"
                 onClick={() => handlePageChange('Contact')}
                 className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
             >
@@ -50,21 +51,6 @@ function Header({ page, }) {
     );
   }
 
-// function PortfolioContainer() {
-// const [currentPage, setCurrentPage] = useState('About');
-
-// const renderPage = () => {
-//     if (currentPage === 'About') {
-//     return <About />;
-//     }
-//     if (currentPage === 'Portfolio') {
-//     return <Portfolio />;
-//     }
-//     if (currentPage === 'Resume') {
-//     return <Resume />;
-//     }
-//     return <Contact />;
-// };
 
 
 export default Header
